@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-detail">
+    <h2>{{ recipe.title }}</h2>
+    
+    <div class="recipe-meta">
+        <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
+        <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+        <p><strong>Source:</strong> <a href="{{ recipe.source_url }}" target="_blank">Original Recipe</a></p>
+    </div>
+    
+    <div class="recipe-section">
+        <h3>Ingredients</h3>
+        <ul>
+            {% for ingredient in recipe.ingredients.split('\n') %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="recipe-section">
+        <h3>Instructions</h3>
+        <ol>
+            {% for step in recipe.instructions.split('\n') %}
+            <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+{% endblock %}
