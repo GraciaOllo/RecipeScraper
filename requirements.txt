@@ -3,4 +3,4 @@ Flask-SQLAlchemy==2.5.1
 beautifulsoup4==4.9.3
 requests==2.26.0
 
-this site should be used to scrape https://www.africanbites.com/ndole/
+this site should be used to scrape https://www.africanbites.com/ndole/gi
